@@ -28,6 +28,7 @@ class Grupo
 		Estudiante grupo[10];
         Estudiante porPeso[10];
         Estudiante porEdad[10];
+        Estudiante porCodigos[10];
 		int ultimo;
 	public:
 		Grupo();
@@ -43,6 +44,8 @@ class Grupo
         double promedioEdad();
         void mayorEdad();
         void mayorPeso();
+        void listadoPorCodigo();
+        void estudiantePorCodigo(int codigo);
 
 
 };

@@ -22,11 +22,11 @@ int main()
 {
    Grupo ipoo;
    
-   Estudiante estudianteUno("Pepito", 14, 30, 1741652);
-   Estudiante estudianteDos("Juanito", 18, 25, 1741623);
+   Estudiante estudianteUno("Pepito", 15, 30, 1741652);
+   Estudiante estudianteDos("Juanito", 15, 25, 1741623);
    Estudiante estudianteTres("Manuel", 15, 25, 1741635);
    Estudiante estudianteCuatro("Alejandro", 14, 36, 1741656);
-   Estudiante estudianteCinco("Andres", 17, 36, 1741699);
+   Estudiante estudianteCinco("Andres", 15, 36, 1741699);
 
    ipoo.agregarEstudiante(estudianteUno);
    ipoo.agregarEstudiante(estudianteDos);
@@ -43,6 +43,7 @@ int main()
     cout << endl;
     ipoo.mayorEdad();
     ipoo.mayorPeso();
-
-   
+    ipoo.estudiantePorCodigo(1741652);
+    cout << endl;
+    ipoo.listadoPorCodigo();
 }
