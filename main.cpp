@@ -22,25 +22,17 @@ int main()
 {
    Grupo ipoo;
    
-   Estudiante estudianteUno("Pepito", 14, 30);
-   
-   if(ipoo.agregarEstudiante(estudianteUno)){
-       cout << endl << "Estudiante agregado con éxito";
-   } else {
-       cout << endl << "Ocurrió un error";
-   }
-   
-   
-   Estudiante estudianteDos("Juanito", 10, 25);
-   
-   if(ipoo.agregarEstudiante(estudianteDos)){
-       cout << endl << "Estudiante agregado con éxito";
-   } else {
-       cout << endl << "Ocurrió un error";
-   }
+   Estudiante estudianteUno("Pepito", 14, 30, 1741652);
+   Estudiante estudianteDos("Juanito", 10, 25, 1741623);
+   Estudiante estudianteTres("Juanito", 10, 25, 1741628);
+
+   ipoo.agregarEstudiante(estudianteUno);
+   ipoo.agregarEstudiante(estudianteDos);
+   ipoo.agregarEstudiante(estudianteTres);
    
    cout << endl;
    ipoo.listarEstuditantes();
+   cout << endl << ipoo.codigoRepetido(1741659);
    
    
 }

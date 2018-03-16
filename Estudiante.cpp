@@ -12,16 +12,17 @@
 
 Estudiante::Estudiante()
 {
-	nombre = "";
-	edad = 0;
-	peso = 0;
+    nombre = "";
+    edad = 0;
+    peso = 0;
+    codigo = 0;
 }
-
-Estudiante::Estudiante(string nombre, int edad, double peso)
+Estudiante::Estudiante(string nombre, int edad, double peso, int codigo)
 {
 	this -> nombre = nombre;
 	this -> edad = edad;
 	this -> peso = peso;
+	this -> codigo = codigo;
 }
 
 Estudiante::~Estudiante()
@@ -52,4 +53,12 @@ void Estudiante::setPeso(double peso){
 
 double Estudiante::getPeso(){
 	return peso;
+}
+
+void Estudiante::setCodigo(int codigo){
+	this -> codigo = codigo;
+}
+
+int Estudiante::getCodigo(){
+	return codigo;
 }

@@ -35,6 +35,8 @@ class Grupo
 		int getTamano();
 		bool agregarEstudiante(Estudiante estudiante);
 		void listarEstuditantes();
+		bool codigoRepetido(int codigo);
+
 };
 
 #endif

@@ -27,9 +27,10 @@ class Estudiante
 		string nombre;
 		int edad;
 		double peso;
+		int codigo;
 	public:
 		Estudiante();
-		Estudiante(string nombre, int edad, double peso );
+		Estudiante(string nombre, int edad, double peso, int codigo );
 		~Estudiante();
 		void setNombre(string nombre);
 		string getNombre();
@@ -37,6 +38,8 @@ class Estudiante
 		int getEdad();
 		void setPeso(double peso);
 		double getPeso();
+		void setCodigo(int codigo);
+		int getCodigo();
 };
 
 #endif
