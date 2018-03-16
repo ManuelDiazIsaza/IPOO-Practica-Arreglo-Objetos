@@ -40,9 +40,9 @@ int main()
    cout << endl << ipoo.promedioPeso();
    cout << endl << ipoo.promedioEdad();
 
-   cout << endl << ipoo.codigoConEdad(14);
     cout << endl;
     ipoo.mayorEdad();
+    ipoo.mayorPeso();
 
    
 }

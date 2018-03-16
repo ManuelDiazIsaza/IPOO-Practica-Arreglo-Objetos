@@ -125,3 +125,20 @@ void Ordenar::insercion(int vector[], int tamano)
     //cout << endl << "Comparaciones : " << intercambios;
     //cout << endl << "intercambios : " << intercambios;
 }
+
+void Ordenar::insercion2(double vector[], int tamano)
+{
+    int actual, j;
+    int intercambios = 0;
+
+    for (int i = 1; i < tamano; i++) {
+        actual = vector[i];
+        for (j = i; j > 0 && vector[j - 1] < actual; j--) {
+            vector[j] = vector[j - 1];
+            intercambios++;
+        }
+        vector[j] = actual;
+    }
+//    cout << endl << "Comparaciones : " << intercambios;
+//    cout << endl << "intercambios : " << intercambios;
+}

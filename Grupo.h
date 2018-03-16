@@ -42,7 +42,7 @@ class Grupo
         double promedioPeso();
         double promedioEdad();
         void mayorEdad();
-        int codigoConEdad(int edad);
+        void mayorPeso();
 
 
 };

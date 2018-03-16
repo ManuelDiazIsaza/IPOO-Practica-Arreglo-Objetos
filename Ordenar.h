@@ -35,6 +35,7 @@ class Ordenar
     void burbuja2(int vector[], int tamano);
     void seleccion(int vector[], int tamano);
     void insercion(int vector[], int tamano);
+    void insercion2(double vector[], int tamano);
 };
 
 #endif

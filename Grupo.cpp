@@ -153,16 +153,48 @@ void Grupo::mayorEdad()
     cout << endl << endl << "======================================================================================" << endl;
 }
 
-int Grupo::codigoConEdad(int edad)
+void Grupo::mayorPeso()
 {
-    int tamano = this -> getTamano();
-    int codigo = 0;
-    for(int i=0;i<tamano;i++)
+    int cuantosEst = this->getUltimo();
+    double pesos[cuantosEst];
+    bool agrego = false;
+    int longitud = 0;
+    string nombre = "";
+    for (int j = 0; j < cuantosEst; j++)
     {
-        if(edad == this -> grupo[i].getEdad())
-            codigo = grupo[i].getCodigo();
+        pesos[j] = this->grupo[j].getPeso();
     }
-    return codigo;
+    Ordenar ordenar;
+    ordenar.insercion2(pesos, cuantosEst);
+    cout << "================== Listado de Estudiantes descendientes por Peso =====================" << endl << endl;
+    cout << "Estudiante" << setw(20) << "Codigo" << setw(15) << "Edad" << setw(15) << "Peso" << endl;
+    for (int i = 0; i < cuantosEst; i++)
+    {
+        agrego=false;
+        for (int k = 0; k < cuantosEst; k++)
+        {
+            if (codigoRepetido2(this -> porPeso, grupo[k].getCodigo()))
+            {
+            }
+            else if (pesos[i] == this -> grupo[k].getPeso())
+            {
+                while(agrego==false)
+                {
+                    this -> porPeso[i] = grupo[k];
+
+                    // cout << endl << "El Estudiante con codigo " << porEdad[i].getCodigo() << " de nombre " << porEdad[i].getNombre() << " tiene la edad de: " << porEdad[i].getEdad();
+                    nombre = porPeso[i].getNombre();
+                    longitud = nombre.length();
+                    cout << nombre.append(20-longitud,'.') << " : " <<setw(5) ;
+                    cout << porPeso[i].getCodigo()  <<setw(15) ;
+                    cout << porPeso[i].getEdad()  <<setw(15) ;
+                    cout << porPeso[i].getPeso()  << endl;
+                    agrego = true;
+                }
+            }
+        }
+    }
+    cout << endl << endl << "======================================================================================" << endl;
 }
 
 void Grupo::listarEstuditantes()
