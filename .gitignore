@@ -2,3 +2,16 @@
 *.xml
 *.xml
 .idea/workspace.xml
+
+.CMakeLists.txt
+.idea/.name
+.idea/misc.xml
+.idea/modules.xml
+.idea/Practica-Arreglo-Objetos.iml
+.idea/vcs.xml
+.idea/codeStyles/Project.xml
+.cmake-buid-debug/cmake_install.cmake
+.cmake-buid-debug/CMakeCache.txt
+.cmake-buid-debug/Ejemplo_de_Clase_2.cbp
+.cmake-buid-debug/Ejemplo_de_Clase_2.exe
+.cmake-buid-debug/Makefile
