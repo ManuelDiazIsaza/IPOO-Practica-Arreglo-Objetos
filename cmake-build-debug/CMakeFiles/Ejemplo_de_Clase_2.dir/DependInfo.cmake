@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "G:/Google Drive/Univalle/Semestre 2/IPOO/Ejemplo de Clase 2/Estudiante.cpp" "G:/Google Drive/Univalle/Semestre 2/IPOO/Ejemplo de Clase 2/cmake-build-debug/CMakeFiles/Ejemplo_de_Clase_2.dir/Estudiante.cpp.obj"
   "G:/Google Drive/Univalle/Semestre 2/IPOO/Ejemplo de Clase 2/Grupo.cpp" "G:/Google Drive/Univalle/Semestre 2/IPOO/Ejemplo de Clase 2/cmake-build-debug/CMakeFiles/Ejemplo_de_Clase_2.dir/Grupo.cpp.obj"
+  "G:/Google Drive/Univalle/Semestre 2/IPOO/Ejemplo de Clase 2/Ordenar.cpp" "G:/Google Drive/Univalle/Semestre 2/IPOO/Ejemplo de Clase 2/cmake-build-debug/CMakeFiles/Ejemplo_de_Clase_2.dir/Ordenar.cpp.obj"
   "G:/Google Drive/Univalle/Semestre 2/IPOO/Ejemplo de Clase 2/main.cpp" "G:/Google Drive/Univalle/Semestre 2/IPOO/Ejemplo de Clase 2/cmake-build-debug/CMakeFiles/Ejemplo_de_Clase_2.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

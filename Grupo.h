@@ -26,6 +26,8 @@ class Grupo
 	private:
 		int tamano = 10;
 		Estudiante grupo[10];
+        Estudiante porPeso[10];
+        Estudiante porEdad[10];
 		int ultimo;
 	public:
 		Grupo();
@@ -36,8 +38,12 @@ class Grupo
 		bool agregarEstudiante(Estudiante estudiante);
 		void listarEstuditantes();
 		bool codigoRepetido(int codigo);
+        bool codigoRepetido2(Estudiante estudiantes[], int codigo);
         double promedioPeso();
         double promedioEdad();
+        void mayorEdad();
+        int codigoConEdad(int edad);
+
 
 };
 

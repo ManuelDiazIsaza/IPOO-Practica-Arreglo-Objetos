@@ -7,6 +7,10 @@ CMakeFiles/Ejemplo_de_Clase_2.dir/Estudiante.cpp.obj: ../Estudiante.h
 CMakeFiles/Ejemplo_de_Clase_2.dir/Grupo.cpp.obj: ../Estudiante.h
 CMakeFiles/Ejemplo_de_Clase_2.dir/Grupo.cpp.obj: ../Grupo.cpp
 CMakeFiles/Ejemplo_de_Clase_2.dir/Grupo.cpp.obj: ../Grupo.h
+CMakeFiles/Ejemplo_de_Clase_2.dir/Grupo.cpp.obj: ../Ordenar.h
+
+CMakeFiles/Ejemplo_de_Clase_2.dir/Ordenar.cpp.obj: ../Ordenar.cpp
+CMakeFiles/Ejemplo_de_Clase_2.dir/Ordenar.cpp.obj: ../Ordenar.h
 
 CMakeFiles/Ejemplo_de_Clase_2.dir/main.cpp.obj: ../Estudiante.h
 CMakeFiles/Ejemplo_de_Clase_2.dir/main.cpp.obj: ../Grupo.h

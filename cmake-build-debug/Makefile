@@ -176,6 +176,33 @@ Grupo.cpp.s:
 	$(MAKE) -f CMakeFiles\Ejemplo_de_Clase_2.dir\build.make CMakeFiles/Ejemplo_de_Clase_2.dir/Grupo.cpp.s
 .PHONY : Grupo.cpp.s
 
+Ordenar.obj: Ordenar.cpp.obj
+
+.PHONY : Ordenar.obj
+
+# target to build an object file
+Ordenar.cpp.obj:
+	$(MAKE) -f CMakeFiles\Ejemplo_de_Clase_2.dir\build.make CMakeFiles/Ejemplo_de_Clase_2.dir/Ordenar.cpp.obj
+.PHONY : Ordenar.cpp.obj
+
+Ordenar.i: Ordenar.cpp.i
+
+.PHONY : Ordenar.i
+
+# target to preprocess a source file
+Ordenar.cpp.i:
+	$(MAKE) -f CMakeFiles\Ejemplo_de_Clase_2.dir\build.make CMakeFiles/Ejemplo_de_Clase_2.dir/Ordenar.cpp.i
+.PHONY : Ordenar.cpp.i
+
+Ordenar.s: Ordenar.cpp.s
+
+.PHONY : Ordenar.s
+
+# target to generate assembly for a file
+Ordenar.cpp.s:
+	$(MAKE) -f CMakeFiles\Ejemplo_de_Clase_2.dir\build.make CMakeFiles/Ejemplo_de_Clase_2.dir/Ordenar.cpp.s
+.PHONY : Ordenar.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -218,6 +245,9 @@ help:
 	@echo ... Grupo.obj
 	@echo ... Grupo.i
 	@echo ... Grupo.s
+	@echo ... Ordenar.obj
+	@echo ... Ordenar.i
+	@echo ... Ordenar.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

@@ -8,4 +8,6 @@ add_executable(Ejemplo_de_Clase_2
         Estudiante.h
         Grupo.cpp
         Grupo.h
-        main.cpp)
+        main.cpp
+        Ordenar.cpp
+        Ordenar.h)
