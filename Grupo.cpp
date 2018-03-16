@@ -71,6 +71,29 @@ bool Grupo::agregarEstudiante(Estudiante estudiante)
     }
 }
 
+double Grupo::promedioPeso()
+{
+    double acumuladorPeso = 0;
+    int tamano = this->getTamano();
+    int cuantosEst = this->getUltimo();
+
+    for (int j = 0; j < cuantosEst; j++) {
+        acumuladorPeso += this->grupo[j].getPeso();
+    }
+    return acumuladorPeso / cuantosEst;
+}
+
+double Grupo::promedioEdad()
+{
+    double acumuladorEdad = 0;
+    int tamano = this->getTamano();
+    int cuantosEst = this->getUltimo();
+
+    for (int j = 0; j < cuantosEst; j++) {
+        acumuladorEdad += this->grupo[j].getEdad();
+    }
+    return acumuladorEdad / cuantosEst;
+}
 
 void Grupo::listarEstuditantes()
 {

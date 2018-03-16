@@ -36,6 +36,8 @@ class Grupo
 		bool agregarEstudiante(Estudiante estudiante);
 		void listarEstuditantes();
 		bool codigoRepetido(int codigo);
+        double promedioPeso();
+        double promedioEdad();
 
 };
 

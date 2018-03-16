@@ -32,7 +32,9 @@ int main()
    
    cout << endl;
    ipoo.listarEstuditantes();
-   cout << endl << ipoo.codigoRepetido(1741659);
+   cout << endl << ipoo.codigoRepetido(1741628);
+   cout << endl << ipoo.promedioPeso();
+   cout << endl << ipoo.promedioEdad();
    
    
 }
