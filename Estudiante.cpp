@@ -62,3 +62,4 @@ void Estudiante::setCodigo(int codigo){
 int Estudiante::getCodigo(){
 	return codigo;
 }
+ //hola hola
