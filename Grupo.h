@@ -26,9 +26,6 @@ class Grupo
 	private:
 		int tamano = 10;
 		Estudiante grupo[10];
-        Estudiante porPeso[10];
-        Estudiante porEdad[10];
-        Estudiante porCodigos[10];
 		int ultimo;
 	public:
 		Grupo();
@@ -46,6 +43,8 @@ class Grupo
         void mayorPeso();
         void listadoPorCodigo();
         void estudiantePorCodigo(int codigo);
+        void estMayorPeso();
+        void estMayorEdad();
 
 
 };

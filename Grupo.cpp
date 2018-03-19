@@ -111,6 +111,7 @@ double Grupo::promedioEdad()
 
 void Grupo::estudiantePorCodigo(int codigo)
 {
+    bool encontro=false;
     Estudiante estudiante;
     double acumuladorEdad = 0;
     int tamano = this->getTamano();
@@ -121,14 +122,24 @@ void Grupo::estudiantePorCodigo(int codigo)
         if(codigo == grupo[j].getCodigo())
         {
             estudiante = this -> grupo[j];
+            encontro=true;
         }
     }
-    cout << "El estudiante con codigo: " << codigo << " es de nommbre " << estudiante.getNombre() << " y su edad es: " << estudiante.getEdad();
+    if(encontro)
+    {
+        cout << "El estudiante con codigo: " << codigo << " es de nombre " << estudiante.getNombre()
+             << " y su edad es: " << estudiante.getEdad();
+    }
+    else
+    {
+        cout << "El estudiante con codigo: " << codigo << " no esta agregado en este grupo.";
+    }
 }
 
 void Grupo::mayorEdad()
 {
     int cuantosEst = this->getUltimo();
+    Estudiante porEdad[cuantosEst];
     int edades[cuantosEst];
     bool agrego = false;
     int longitud = 0;
@@ -146,14 +157,14 @@ void Grupo::mayorEdad()
         agrego=false;
           for (int k = 0; k < cuantosEst; k++)
           {
-            if (codigoRepetido2(this -> porEdad, grupo[k].getCodigo()))
+            if (codigoRepetido2(porEdad, grupo[k].getCodigo()))
             {
             }
             else if (edades[i] == this -> grupo[k].getEdad())
             {
                while(agrego==false)
                {
-                this -> porEdad[i] = grupo[k];
+                porEdad[i] = grupo[k];
 
                // cout << endl << "El Estudiante con codigo " << porEdad[i].getCodigo() << " de nombre " << porEdad[i].getNombre() << " tiene la edad de: " << porEdad[i].getEdad();
                    nombre = porEdad[i].getNombre();
@@ -173,6 +184,7 @@ void Grupo::mayorEdad()
 void Grupo::mayorPeso()
 {
     int cuantosEst = this->getUltimo();
+    Estudiante porPeso[cuantosEst];
     double pesos[cuantosEst];
     bool agrego = false;
     int longitud = 0;
@@ -190,14 +202,14 @@ void Grupo::mayorPeso()
         agrego=false;
         for (int k = 0; k < cuantosEst; k++)
         {
-            if (codigoRepetido2(this -> porPeso, grupo[k].getCodigo()))
+            if (codigoRepetido2(porPeso, grupo[k].getCodigo()))
             {
             }
             else if (pesos[i] == this -> grupo[k].getPeso())
             {
                 while(agrego==false)
                 {
-                    this -> porPeso[i] = grupo[k];
+                    porPeso[i] = grupo[k];
 
                     // cout << endl << "El Estudiante con codigo " << porEdad[i].getCodigo() << " de nombre " << porEdad[i].getNombre() << " tiene la edad de: " << porEdad[i].getEdad();
                     nombre = porPeso[i].getNombre();
@@ -217,6 +229,7 @@ void Grupo::mayorPeso()
 void Grupo::listadoPorCodigo()
 {
     int cuantosEst = this->getUltimo();
+    Estudiante porCodigos[cuantosEst];
     int codigos[cuantosEst];
     bool agrego = false;
     int longitud = 0;
@@ -234,17 +247,17 @@ void Grupo::listadoPorCodigo()
         agrego=false;
         for (int k = 0; k < cuantosEst; k++)
         {
-            if (codigoRepetido2(this -> porCodigos, grupo[k].getCodigo()))
+            if (codigoRepetido2(porCodigos, grupo[k].getCodigo()))
             {
             }
             else if (codigos[i] == this -> grupo[k].getCodigo())
             {
                 while(agrego==false)
                 {
-                    this -> porCodigos[i] = grupo[k];
+                    porCodigos[i] = grupo[k];
 
                     // cout << endl << "El Estudiante con codigo " << porEdad[i].getCodigo() << " de nombre " << porEdad[i].getNombre() << " tiene la edad de: " << porEdad[i].getEdad();
-                    nombre = porEdad[i].getNombre();
+                    nombre = porCodigos[i].getNombre();
                     longitud = nombre.length();
                     cout << nombre.append(20-longitud,'.') << " : " <<setw(5) ;
                     cout << porCodigos[i].getCodigo()  <<setw(15) ;
@@ -263,6 +276,7 @@ void Grupo::listarEstuditantes()
     int ultimo = this -> getUltimo();
     int longitud = 0;
     string nombre = "";
+    cout << "================== Listado de Estudiantes por orden de adicion =====================" << endl << endl;
     cout << "Estudiante" << setw(20) << "Codigo" << setw(15) << "Edad" << setw(15) << "Peso" << endl;
     for(int i = 0 ; i < ultimo; i++){
         nombre = grupo[i].getNombre();
@@ -272,4 +286,63 @@ void Grupo::listarEstuditantes()
         cout << grupo[i].getEdad()  <<setw(15) ;
         cout << grupo[i].getPeso()  << endl;
     }
+    cout << endl << endl << "======================================================================================" << endl;
+}
+
+void Grupo::estMayorPeso()
+{
+    int cuantosEst = this->getUltimo();
+    double pesos[cuantosEst];
+    int longitud = 0;
+    string nombre = "";
+    for (int j = 0; j < cuantosEst; j++)
+    {
+        pesos[j] = this->grupo[j].getPeso();
+    }
+    Ordenar ordenar;
+    ordenar.insercion2(pesos, cuantosEst);
+    cout << "================== Listado de Estudiantes con mayor peso =====================" << endl << endl;
+    cout << "Estudiante" << setw(20) << "Codigo" << setw(15) << "Edad" << setw(15) << "Peso" << endl;
+    for (int i = 0; i < cuantosEst; i++)
+    {
+        if(pesos[0] == this -> grupo[i].getPeso())
+        {
+                    nombre = grupo[i].getNombre();
+                    longitud = nombre.length();
+                    cout << nombre.append(20-longitud,'.') << " : " <<setw(5) ;
+                    cout << grupo[i].getCodigo()  <<setw(15) ;
+                    cout << grupo[i].getEdad()  <<setw(15) ;
+                    cout << grupo[i].getPeso()  << endl;
+        }
+    }
+    cout << endl << endl << "======================================================================================" << endl;
+}
+
+void Grupo::estMayorEdad()
+{
+    int cuantosEst = this->getUltimo();
+    int edades[cuantosEst];
+    int longitud = 0;
+    string nombre = "";
+    for (int j = 0; j < cuantosEst; j++)
+    {
+        edades[j] = this->grupo[j].getEdad();
+    }
+    Ordenar ordenar;
+    ordenar.insercion(edades, cuantosEst);
+    cout << "================== Listado de Estudiantes con mayor edad =====================" << endl << endl;
+    cout << "Estudiante" << setw(20) << "Codigo" << setw(15) << "Edad" << setw(15) << "Peso" << endl;
+    for (int i = 0; i < cuantosEst; i++)
+    {
+        if(edades[0] == this -> grupo[i].getEdad())
+        {
+            nombre = grupo[i].getNombre();
+            longitud = nombre.length();
+            cout << nombre.append(20-longitud,'.') << " : " <<setw(5) ;
+            cout << grupo[i].getCodigo()  <<setw(15) ;
+            cout << grupo[i].getEdad()  <<setw(15) ;
+            cout << grupo[i].getPeso()  << endl;
+        }
+    }
+    cout << endl << endl << "======================================================================================" << endl;
 }
