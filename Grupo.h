@@ -1,7 +1,7 @@
 /*
   Archivo: Grupo.h
-  Autor: Luis Yovany Romo
-  Email: luis.romo@correounivalle.edu.co
+  Autor: Manuel Diaz 1741652, Jeffrey Rios Muñoz 1744831, Juan Esteban Camargo Chacon 1741510
+  Email: manuel.isaza@correounivalle.edu.co
   Fecha creación: 2018-02-09
   Fecha Última modificación: 2018-02-09
   Versión: 0.1

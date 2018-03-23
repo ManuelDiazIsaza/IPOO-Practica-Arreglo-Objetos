@@ -1,7 +1,7 @@
 /*
   Archivo: ADN.cpp
-  Autor: Luis Yovany Romo Portilla
-  Email: luis.romo@correounivalle.edu.co
+  Autor: Manuel Diaz 1741652, Jeffrey Rios Muñoz 1744831, Juan Esteban Camargo Chacon 1741510
+  Email: manuel.isaza@correounivalle.edu.co
   Fecha creación: 2017-08-31
   Fecha última modificación: 2017-08-31
   Versión: 0.1

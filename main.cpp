@@ -1,7 +1,7 @@
 /*
   Archivo: Main.cpp
-  Autor: Luis Yovany Romo Portilla
-  Email: luis.romo@correounivalle.edu.co
+  Autor: Manuel Diaz 1741652, Jeffrey Rios Muñoz 1744831, Juan Esteban Camargo Chacon 1741510
+  Email: manuel.isaza@correounivalle.edu.co
   Fecha creaciC3n: 2017-08-11
   Fecha C:ltima modificaciC3n: 2017-08-31
   VersiC3n: 0.1
